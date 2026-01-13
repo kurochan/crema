@@ -1,0 +1,28 @@
+module github.com/abema/crema/example
+
+go 1.24.0
+
+require (
+	github.com/dgraph-io/ristretto v0.2.0
+	github.com/abema/crema v0.0.0
+	github.com/abema/crema/ext/protobuf v0.0.0
+	github.com/abema/crema/ext/ristretto v0.0.0
+	github.com/abema/crema/ext/valkey-go v0.0.0
+	google.golang.org/protobuf v1.36.11
+	github.com/valkey-io/valkey-go v1.0.70
+)
+
+require (
+	github.com/cespare/xxhash/v2 v2.1.1 // indirect
+	github.com/dustin/go-humanize v1.0.1 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	golang.org/x/sys v0.39.0 // indirect
+)
+
+replace github.com/abema/crema => ..
+
+replace github.com/abema/crema/ext/ristretto => ../ext/ristretto
+
+replace github.com/abema/crema/ext/protobuf => ../ext/protobuf
+
+replace github.com/abema/crema/ext/valkey-go => ../ext/valkey-go

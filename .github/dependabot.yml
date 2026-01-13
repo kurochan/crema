@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/protobuf"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/protobuf/tool"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/valkey-go"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/go-json"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/golang-lru"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/ristretto"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/ext/gomemcache"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"

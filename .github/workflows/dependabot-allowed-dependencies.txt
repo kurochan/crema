@@ -1,0 +1,13 @@
+github.com/bradfitz/gomemcache
+github.com/valkey-io/valkey-go
+github.com/alicebob/miniredis/v2
+github.com/goccy/go-json
+github.com/bufbuild/buf/cmd/buf
+google.golang.org/protobuf/cmd/protoc-gen-go
+github.com/abema/crema
+
+actions/checkout
+actions/cache
+actions/setup-go
+actions/github-script
+dependabot/fetch-metadata

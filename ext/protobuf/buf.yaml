@@ -1,0 +1,16 @@
+version: v2
+modules:
+  - path: .
+lint:
+  use:
+    - STANDARD
+  ignore_only:
+    PACKAGE_DIRECTORY_MATCH:
+      - internal/proto/cache_object.proto
+      - internal/proto/cache_object_test.proto
+    PACKAGE_VERSION_SUFFIX:
+      - internal/proto/cache_object.proto
+      - internal/proto/cache_object_test.proto
+breaking:
+  use:
+    - FILE

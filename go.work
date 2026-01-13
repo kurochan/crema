@@ -1,0 +1,12 @@
+go 1.24.9
+
+use (
+	.
+	./example
+	./ext/go-json
+	./ext/golang-lru
+	./ext/gomemcache
+	./ext/protobuf
+	./ext/ristretto
+	./ext/valkey-go
+)

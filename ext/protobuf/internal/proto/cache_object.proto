@@ -1,0 +1,12 @@
+edition = "2023";
+package proto;
+
+import "google/protobuf/go_features.proto";
+
+option features.(pb.go).api_level = API_OPAQUE;
+
+message ProtoCacheObject {
+  int32 version = 1;
+  bytes serialized_value = 2;
+  int64 expire_at_millis = 3;
+}
