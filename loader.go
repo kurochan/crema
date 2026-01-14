@@ -3,12 +3,20 @@ package crema
 import (
 	"context"
 	"hash/maphash"
+	"runtime"
 	"sync"
 )
 
-const defaultShardCount = 16
+const (
+	minShardCount   = 8
+	maxShardCount   = 32
+	shardMultiplier = 2
+)
 
-var mapHashSeed = maphash.MakeSeed()
+var (
+	mapHashSeed = maphash.MakeSeed()
+	shardCount  = max(min(runtime.GOMAXPROCS(0)*shardMultiplier, maxShardCount), minShardCount)
+)
 
 type internalLoader[V any] interface {
 	load(ctx context.Context, key string, loader CacheLoadFunc[V]) (V, bool, error)
@@ -42,7 +50,7 @@ func (l *singleflightLoader[V]) shardFor(key string) *singleflightShard[V] {
 }
 
 func newSingleflightLoader[V any](metrics MetricsProvider) *singleflightLoader[V] {
-	shards := make([]singleflightShard[V], defaultShardCount)
+	shards := make([]singleflightShard[V], shardCount)
 	for i := range shards {
 		shards[i].inflight = make(map[string]*inflight[V])
 	}
