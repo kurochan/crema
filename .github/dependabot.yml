@@ -32,6 +32,10 @@ updates:
     directory: "/ext/gomemcache"
     schedule:
       interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/example"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
