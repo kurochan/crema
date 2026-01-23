@@ -18,12 +18,14 @@ func ExampleRistrettoCacheProvider() {
 	})
 	if err != nil {
 		fmt.Println(err)
+
 		return
 	}
 
 	provider, err := cremaristretto.NewRistrettoCacheProvider[crema.CacheObject[string]](cache)
 	if err != nil {
 		fmt.Println(err)
+
 		return
 	}
 
@@ -33,6 +35,7 @@ func ExampleRistrettoCacheProvider() {
 	})
 	if err != nil {
 		fmt.Println(err)
+
 		return
 	}
 

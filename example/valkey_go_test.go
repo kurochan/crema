@@ -18,6 +18,7 @@ func ExampleValkeyCacheProvider() {
 	client, err := valkey.NewClient(valkey.ClientOption{InitAddress: []string{"127.0.0.1:6379"}})
 	if err != nil {
 		fmt.Println(err)
+
 		return
 	}
 	defer client.Close()
@@ -30,6 +31,7 @@ func ExampleValkeyCacheProvider() {
 	})
 	if err != nil {
 		fmt.Println(err)
+
 		return
 	}
 
