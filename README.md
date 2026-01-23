@@ -80,6 +80,7 @@ println(value)
 | JSONByteStringCodec | `github.com/abema/crema` | Standard library JSON encoding to `[]byte`. | [✅](example/valkey_go_test.go) |
 | JSONByteStringCodec | `github.com/abema/crema/ext/go-json` | goccy/go-json encoding to `[]byte`. | - |
 | ProtobufCodec | `github.com/abema/crema/ext/protobuf` | Protobuf encoding to `[]byte`. | [✅](example/protobuf_test.go) |
+| BinaryCompressionCodec | `github.com/abema/crema` | Wraps another codec and zlib-compresses encoded bytes above a threshold. | [✅](example/binary_compression_test.go) |
 
 ### MetricsProvider
 
