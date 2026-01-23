@@ -22,6 +22,11 @@ where `t` is the remaining time. The steepness `k` is set so that $`p(t)=0.999`$
 
 ![Revalidation curve](doc/revalidation.svg)
 
+This design is inspired by the following references:
+
+- [Cache Stampede: Avoiding Hot Spots in Distributed Caching Systems](https://cseweb.ucsd.edu/~avattani/papers/cache_stampede.pdf)
+- [Sometimes I Cache](https://blog.cloudflare.com/sometimes-i-cache/)
+
 ## Installation
 
 ```sh
