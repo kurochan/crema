@@ -23,7 +23,7 @@ Alternatively, you can email security concerns to the maintainers listed in the 
 
 ### Response Timeline
 
-- Initial response: Within 7 days
+- Initial response: Best effort
 - We will work with you to understand and address the issue
 - Public disclosure will be coordinated after a fix is available
 
