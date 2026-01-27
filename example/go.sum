@@ -1,3 +1,11 @@
+github.com/abema/crema v0.0.1 h1:ayqXFz3y99Z5MT2OqAO8cnJQCzn//GhYGaGK98Zh1Uo=
+github.com/abema/crema v0.0.1/go.mod h1:16fUBydoLB69oCMyfaZGJWoK0KAvbHeoVmI+10yeNZg=
+github.com/abema/crema/ext/protobuf v0.0.1 h1:oy86RrloeGxCN97wahXWqKzppqdFUOauOiPKQSrsBDw=
+github.com/abema/crema/ext/protobuf v0.0.1/go.mod h1:GFfbPX22F2IJaAB50ecWI13usCfXgLoC9TsrDeIXoTc=
+github.com/abema/crema/ext/ristretto v0.0.1 h1:Hf6Z+/yahG38ZQt1xZT4dRMGXSs9fuW5AgkwufNXD78=
+github.com/abema/crema/ext/ristretto v0.0.1/go.mod h1:eDm9cyqWMO5c2z2bTCcxsG66lshl6NDFhpisztK4G+8=
+github.com/abema/crema/ext/valkey-go v0.0.1 h1:N/1wFGVv25v16lBOTJiL/Y/5VcarvIQ6+byAt+OCrwk=
+github.com/abema/crema/ext/valkey-go v0.0.1/go.mod h1:GRbwiOcAORK/Uo/yoaNgnMdNkwvHuss7oAE1WKmPndY=
 github.com/alicebob/miniredis/v2 v2.36.1 h1:Dvc5oAnNOr7BIfPn7tF269U8DvRW1dBG2D5n0WrfYMI=
 github.com/alicebob/miniredis/v2 v2.36.1/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/cespare/xxhash/v2 v2.1.1 h1:6MnRN8NT7+YBpUIWxHtefFZOKTAPgGjpQSxqLNn0+qY=
