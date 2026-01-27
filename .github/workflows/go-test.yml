@@ -7,6 +7,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  GOPRIVATE: "github.com/abema/crema"
+
 jobs:
   go-test:
     runs-on: ubuntu-latest
@@ -24,6 +27,8 @@ jobs:
           key: v1-${{ runner.os }}-go-test-${{ hashFiles('go.work.sum', '**/go.sum') }}
           restore-keys: |
             v1-${{ runner.os }}-go-test-
+      - name: setup-git
+        run: git config --global url."https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
       - name: Go generate (root) and verify clean
         run: |
           go generate
