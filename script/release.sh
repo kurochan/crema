@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu -o pipefail
 
-MODULE_PREFIX="https://github.com/abema/crema"
+MODULE_PREFIX="github.com/abema/crema"
 
 SUBMODULE_DIRS=(
   "ext/go-json"
