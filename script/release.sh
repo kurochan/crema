@@ -69,10 +69,10 @@ create_tag "." "${VERSION}"
 echo ""
 echo "### update submodules ###"
 for dir1 in "${SUBMODULE_DIRS[@]}" ; do
-  pushd ${dir1} > /dev/null
+  pushd "${dir1}" > /dev/null
     echo "update ${dir1}/go.mod"
     go get "${MODULE_PREFIX}@${VERSION}"
-  popd
+  popd > /dev/null
 done
 
 # Commit Update
@@ -90,13 +90,16 @@ done
 
 echo "### update submodule references ###"
 for dir1 in "${SUBMODULE_DIRS[@]}" ; do
-  pushd ${dir1} > /dev/null
+  pushd "${dir1}" > /dev/null
     echo "update ${dir1}"
     for dir2 in "${SUBMODULE_DIRS[@]}" ; do
+      if [ "$dir1" = "$dir2" ]; then
+        continue
+      fi
       go get "${MODULE_PREFIX}/${dir2}@${VERSION}"
       go mod tidy
     done
-  popd
+  popd > /dev/null
 done
 
 echo ""
