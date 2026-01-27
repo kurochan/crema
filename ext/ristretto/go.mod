@@ -2,7 +2,7 @@ module github.com/abema/crema/ext/ristretto
 
 go 1.24.0
 
-require github.com/abema/crema v0.0.0
+require github.com/abema/crema v0.0.1
 
 require github.com/dgraph-io/ristretto v0.2.0
 
@@ -12,5 +12,3 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	golang.org/x/sys v0.39.0 // indirect
 )
-
-replace github.com/abema/crema => ../..

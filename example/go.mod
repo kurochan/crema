@@ -3,10 +3,10 @@ module github.com/abema/crema/example
 go 1.24.9
 
 require (
-	github.com/abema/crema v0.0.0
-	github.com/abema/crema/ext/protobuf v0.0.0
-	github.com/abema/crema/ext/ristretto v0.0.0
-	github.com/abema/crema/ext/valkey-go v0.0.0
+	github.com/abema/crema v0.0.1
+	github.com/abema/crema/ext/protobuf v0.0.1
+	github.com/abema/crema/ext/ristretto v0.0.1
+	github.com/abema/crema/ext/valkey-go v0.0.1
 	github.com/dgraph-io/ristretto v0.2.0
 	github.com/valkey-io/valkey-go v1.0.70
 	google.golang.org/protobuf v1.36.11
@@ -18,11 +18,3 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	golang.org/x/sys v0.39.0 // indirect
 )
-
-replace github.com/abema/crema => ..
-
-replace github.com/abema/crema/ext/ristretto => ../ext/ristretto
-
-replace github.com/abema/crema/ext/protobuf => ../ext/protobuf
-
-replace github.com/abema/crema/ext/valkey-go => ../ext/valkey-go
