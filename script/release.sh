@@ -68,9 +68,9 @@ create_tag "." "${VERSION}"
 # Update submodules
 echo ""
 echo "### update submodules ###"
-for dir1 in "${SUBMODULE_DIRS[@]}" ; do
-  pushd "${dir1}" > /dev/null
-    echo "update ${dir1}/go.mod"
+for dir in "${SUBMODULE_DIRS[@]}" ; do
+  pushd "${dir}" > /dev/null
+    echo "update ${dir}/go.mod"
     go get "${MODULE_PREFIX}@${VERSION}"
   popd > /dev/null
 done
@@ -83,24 +83,18 @@ git push origin main
 
 # Release submodules
 echo "### release submodules ###"
-for dir1 in "${SUBMODULE_DIRS[@]}" ; do
-  echo "release ${dir1}"
-  create_tag "${dir1}" "${VERSION}"
+for dir in "${SUBMODULE_DIRS[@]}" ; do
+  echo "release ${dir}"
+  create_tag "${dir}" "${VERSION}"
 done
 
-echo "### update submodule references ###"
-for dir1 in "${SUBMODULE_DIRS[@]}" ; do
-  pushd "${dir1}" > /dev/null
-    echo "update ${dir1}"
-    for dir2 in "${SUBMODULE_DIRS[@]}" ; do
-      if [ "$dir1" = "$dir2" ]; then
-        continue
-      fi
-      go get "${MODULE_PREFIX}/${dir2}@${VERSION}"
-      go mod tidy
-    done
-  popd > /dev/null
-done
+echo "### update example references ###"
+pushd "./example" > /dev/null
+  for dir in "${SUBMODULE_DIRS[@]}" ; do
+    go get "${MODULE_PREFIX}/${dir}@${VERSION}"
+    go mod tidy
+  done
+popd > /dev/null
 
 echo ""
 echo "Create GitHub Release..."
