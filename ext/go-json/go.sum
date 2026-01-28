@@ -4,5 +4,7 @@ github.com/abema/crema v0.0.10 h1:F2lJO/zjK1EvgN8jhLy2OWxgNnqJZLMe392GKbiTEL0=
 github.com/abema/crema v0.0.10/go.mod h1:16fUBydoLB69oCMyfaZGJWoK0KAvbHeoVmI+10yeNZg=
 github.com/abema/crema v0.0.11 h1:XtKm7MYBzv3vDfdiPNBTZUZsR6h7tXpWo0QjzM9bfig=
 github.com/abema/crema v0.0.11/go.mod h1:16fUBydoLB69oCMyfaZGJWoK0KAvbHeoVmI+10yeNZg=
+github.com/abema/crema v0.1.1 h1:2dXG8EK9/VwQxWiFpe2/icbYyWm6cEgrSXlBmzzmyjY=
+github.com/abema/crema v0.1.1/go.mod h1:16fUBydoLB69oCMyfaZGJWoK0KAvbHeoVmI+10yeNZg=
 github.com/goccy/go-json v0.10.5 h1:Fq85nIqj+gXn/S5ahsiTlK3TmC85qgirsdTP/+DeaC4=
 github.com/goccy/go-json v0.10.5/go.mod h1:oq7eo15ShAhp70Anwd5lgX2pLfOS3QCiwU/PULtXL6M=
