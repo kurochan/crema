@@ -48,7 +48,7 @@ release_tag() {
   tag="${tag#./}"
 
   echo "release tag ${tag}"
-  gh release create "${VERSION}" --generate-notes --latest="${latest}"
+  gh release create "${tag}" --generate-notes --latest="${latest}"
 }
 
 if [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
