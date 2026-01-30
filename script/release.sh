@@ -2,6 +2,7 @@
 set -eu -o pipefail
 
 MODULE_PREFIX="github.com/abema/crema"
+RELEASE_ORIGIN="https://github.com/abema/crema"
 
 SUBMODULE_DIRS=(
   "ext/go-json"
@@ -36,7 +37,7 @@ create_tag() {
 
   echo "create tag ${tag}"
   git tag -a "${tag}" -m "Release ${tag}"
-  git push origin "${tag}"
+  git push release-origin "${tag}"
 }
 
 release_tag() {
@@ -62,6 +63,9 @@ if ! [[ "$VERSION" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z]+(\.[0-9A-Za-z]+)*)?$
   usage
   exit 1
 fi
+
+git remote add release-origin ${RELEASE_ORIGIN} || :
+git remote set-url release-origin https://github.com/abema/crema
 
 read -r -p "Release version '${VERSION}'? Type 'yes' to continue: " CONFIRM
 if [ "$CONFIRM" != "yes" ]; then
@@ -94,7 +98,7 @@ go work sync
 echo ""
 echo "### commit update ###"
 git commit -a -m "update submodules to ${VERSION}"
-git push origin main
+git push release-origin main
 
 # Release submodules
 echo "### release submodules ###"
@@ -116,7 +120,7 @@ pushd "example" > /dev/null
 popd > /dev/null
 go work sync
 git commit -a -m "update example to ${VERSION}"
-git push origin main
+git push release-origin main
 
 echo ""
 echo "Create GitHub Release..."
